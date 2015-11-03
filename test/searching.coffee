@@ -81,9 +81,11 @@ describe 'Searching', ->
 
     it 'automated testing', ->
 
-      for i in [0...100]
-        list = ((Math.floor Math.random()*10000) for i in [0...1000])
-        list.sort (a, b)=> a - b
-        index = list.indexOf list[(Math.floor Math.random()*999)]
+      for i in [0...10]
+        protoList = ((Math.floor Math.random()*10000) for i in [0...1000])
+        protoList.sort (a, b)=> a - b
+        list = []
+        list.push item for item in list when (list.indexOf item) > -1
+        index = list.indexOf list[(Math.floor Math.random()*(list.length-3))]
         expect(fn list, list[index]).to.equal index
 
