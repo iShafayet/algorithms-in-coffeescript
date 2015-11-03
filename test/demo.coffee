@@ -1,11 +1,11 @@
 
 expect = require('chai').expect
 
-describe 'Scenarios', ->
+describe 'Demo', ->
 
-  describe 'Scenario 1', ->
+  describe 'Truth test', ->
 
-    it 'test', ->
+    it 'true should equal true', ->
 
       expect(true).to.equal(true)
 
