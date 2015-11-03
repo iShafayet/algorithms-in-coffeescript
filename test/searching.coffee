@@ -48,10 +48,12 @@ describe 'Searching', ->
 
       expect(=> fn [7,2,123,7,9,11,21], 9 ).to.throw('Unsorted List')
 
-    it 'with sorted array', ->
+    it 'with sorted array (1)', ->
 
       results = fn [1,2,5,7,9,11,21], 9
       expect(results).to.equal 4
+
+    it 'with sorted array (2)', ->
 
       results = fn [1,2,5,7,9,11,21], 10
       expect(results).to.equal -1
