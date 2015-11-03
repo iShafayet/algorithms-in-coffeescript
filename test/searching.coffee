@@ -40,6 +40,14 @@ describe 'Searching', ->
       results = fn [], 10
       expect(results).to.equal -1
 
+    it 'automated testing', ->
+
+      for i in [0...100]
+        list = ((Math.floor Math.random()*10000) for i in [0...1000])
+        index = list.indexOf list[(Math.floor Math.random()*999)]
+        expect(fn list, list[index]).to.equal index
+
+
   describe 'binarySearch', ->
 
     fn = binarySearch
@@ -70,3 +78,12 @@ describe 'Searching', ->
 
       results = fn [], 10
       expect(results).to.equal -1
+
+    it 'automated testing', ->
+
+      for i in [0...100]
+        list = ((Math.floor Math.random()*10000) for i in [0...1000])
+        list.sort (a, b)=> a - b
+        index = list.indexOf list[(Math.floor Math.random()*999)]
+        expect(fn list, list[index]).to.equal index
+
