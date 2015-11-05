@@ -47,7 +47,6 @@ describe 'Searching', ->
         index = list.indexOf list[(Math.floor Math.random()*999)]
         expect(fn list, list[index]).to.equal index
 
-
   describe 'binarySearch', ->
 
     fn = binarySearch
@@ -88,4 +87,3 @@ describe 'Searching', ->
         list.push item for item in list when (list.indexOf item) > -1
         index = list.indexOf list[(Math.floor Math.random()*(list.length-3))]
         expect(fn list, list[index]).to.equal index
-

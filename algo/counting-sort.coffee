@@ -5,8 +5,10 @@
 
 @countingSort = (list)->
   return [] if list.length is 0
+
   min = list[(findMin list)]
   max = list[(findMax list)]
+
   countList = (0 for item in [min..max])
   
   for value in list
@@ -19,4 +21,3 @@
       sortedList.push (index+min) for item in [0...count]
 
   return sortedList
-

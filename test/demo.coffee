@@ -9,5 +9,3 @@ describe 'Demo', ->
 
       expect(true).to.equal(true)
 
-
-

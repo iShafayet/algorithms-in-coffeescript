@@ -8,6 +8,3 @@
     sortedList.push list[indexOfMinValue]
     list.splice indexOfMinValue, 1
   return sortedList
-
-
-

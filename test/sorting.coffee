@@ -11,8 +11,6 @@ expect = require('chai').expect
 
 { countingSort } = require './../algo/counting-sort.coffee'
 
-
-
 describe 'Sorting', ->
 
   describe 'selectionSort', ->
@@ -48,8 +46,6 @@ describe 'Sorting', ->
         list.sort (a, b)-> a - b
         expect(sortedList).to.deep.equal list
 
-
-
   describe 'insertionSort', ->
 
     fn = insertionSort
@@ -83,7 +79,6 @@ describe 'Sorting', ->
         list.sort (a, b)-> a - b
         expect(sortedList).to.deep.equal list
 
-
   describe 'mergeSort', ->
 
     fn = mergeSort
@@ -116,7 +111,6 @@ describe 'Sorting', ->
         expect(sortedList).to.not.equal list
         list.sort (a, b)-> a - b
         expect(sortedList).to.deep.equal list
-
 
   describe 'quickSort', ->
 
@@ -153,7 +147,6 @@ describe 'Sorting', ->
         list.sort (a, b)-> a - b
         expect(sortedList).to.deep.equal list
 
-
   describe 'countingSort', ->
 
     fn = countingSort
@@ -188,4 +181,3 @@ describe 'Sorting', ->
         
         list.sort (a, b)-> a - b
         expect(sortedList).to.deep.equal list
-
