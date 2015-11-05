@@ -154,7 +154,7 @@ describe 'Sorting', ->
         expect(sortedList).to.deep.equal list
 
 
-  describe.only 'countingSort', ->
+  describe 'countingSort', ->
 
     fn = countingSort
 
