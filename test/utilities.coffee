@@ -5,6 +5,8 @@ expect = require('chai').expect
 
 { findMin } = require './../algo/find-min.coffee'
 
+{ findMax } = require './../algo/find-max.coffee'
+
 describe 'Misc', ->
 
   describe 'isListAscending', ->
@@ -44,6 +46,30 @@ describe 'Misc', ->
 
       results = fn [1,2,5,7,9,11,21]
       expect(results).to.equal 0
+
+    it 'with one element array', ->
+
+      results = fn [1]
+      expect(results).to.equal 0
+
+    it 'with empty array', ->
+
+      results = fn []
+      expect(results).to.equal -1
+
+  describe 'findMax', ->
+
+    fn = findMax
+
+    it 'with unsorted array', ->
+
+      results = fn [7,2,123,7,9,11,21]
+      expect(results).to.equal 2
+
+    it 'with sorted array', ->
+
+      results = fn [1,2,5,7,9,11,21]
+      expect(results).to.equal 6
 
     it 'with one element array', ->
 
